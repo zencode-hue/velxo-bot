@@ -5,7 +5,7 @@ module.exports = {
   customId: 'market_modal',
 
   async execute(interaction, client) {
-    await interaction.deferReply({ ephemeral: true });
+    await interaction.deferReply({ flags: MessageFlags.Ephemeral });
 
     const subject      = interaction.fields.getTextInputValue('subject');
     const message      = interaction.fields.getTextInputValue('message');

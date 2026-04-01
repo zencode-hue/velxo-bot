@@ -6,7 +6,7 @@ module.exports = {
   customId: 'deliver_modal:',
 
   async execute(interaction, client) {
-    await interaction.deferReply({ ephemeral: true });
+    await interaction.deferReply({ flags: MessageFlags.Ephemeral });
 
     const parts = interaction.customId.split(':');
     const memberId = parts[1];

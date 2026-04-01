@@ -13,7 +13,7 @@ module.exports = {
 
   async execute(interaction, client) {
     if (!hasStaffRole(interaction.member)) {
-      return interaction.reply({ embeds: [errorEmbed('No Permission')], ephemeral: true });
+      return interaction.reply({ embeds: [errorEmbed('No Permission')], flags: MessageFlags.Ephemeral });
     }
 
     const sub = interaction.options.getSubcommand();

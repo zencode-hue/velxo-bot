@@ -5,7 +5,7 @@ module.exports = {
   customId: 'announce_modal:',
 
   async execute(interaction, client) {
-    await interaction.deferReply({ ephemeral: true });
+    await interaction.deferReply({ flags: MessageFlags.Ephemeral });
 
     const channelId   = interaction.customId.split(':')[1];
     const channel     = interaction.guild.channels.cache.get(channelId);

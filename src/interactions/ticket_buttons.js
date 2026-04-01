@@ -27,7 +27,7 @@ module.exports = {
         .setDescription('Are you sure you want to close this ticket? A transcript will be saved.')
         .setColor(VELXO_ORANGE)
         .setFooter({ text: BOT_FOOTER, iconURL: SHOP_ICON });
-      return interaction.reply({ embeds: [embed], components: [confirm], ephemeral: true });
+      return interaction.reply({ embeds: [embed], components: [confirm], flags: MessageFlags.Ephemeral });
     }
 
     // ── Confirm close ─────────────────────────────────────────────────────────
@@ -63,14 +63,14 @@ module.exports = {
 
     // ── Cancel close ──────────────────────────────────────────────────────────
     if (id === 'ticket_cancel_close') {
-      return interaction.reply({ content: 'Cancelled.', ephemeral: true });
+      return interaction.reply({ content: 'Cancelled.', flags: MessageFlags.Ephemeral });
     }
 
     // ── Claim button ──────────────────────────────────────────────────────────
     if (id === 'ticket_claim') {
       const staffRoleId = process.env.STAFF_ROLE_ID;
       if (staffRoleId && !interaction.member.roles.cache.has(staffRoleId)) {
-        return interaction.reply({ embeds: [errorEmbed('No Permission', 'Only staff can claim tickets.')], ephemeral: true });
+        return interaction.reply({ embeds: [errorEmbed('No Permission', 'Only staff can claim tickets.')], flags: MessageFlags.Ephemeral });
       }
       const embed = new EmbedBuilder()
         .setDescription(`✋  Ticket claimed by ${interaction.user}`)
@@ -97,7 +97,7 @@ module.exports = {
     if (id === 'ticket_adduser') {
       const staffRoleId = process.env.STAFF_ROLE_ID;
       if (staffRoleId && !interaction.member.roles.cache.has(staffRoleId)) {
-        return interaction.reply({ embeds: [errorEmbed('No Permission')], ephemeral: true });
+        return interaction.reply({ embeds: [errorEmbed('No Permission')], flags: MessageFlags.Ephemeral });
       }
       const modal = new ModalBuilder().setCustomId('ticket_adduser_modal').setTitle('➕  Add User to Ticket');
       modal.addComponents(

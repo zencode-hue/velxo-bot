@@ -8,7 +8,7 @@ module.exports = {
 
   async execute(interaction) {
     if (!hasStaffRole(interaction.member)) {
-      return interaction.reply({ embeds: [errorEmbed('No Permission')], ephemeral: true });
+      return interaction.reply({ embeds: [errorEmbed('No Permission')], flags: MessageFlags.Ephemeral });
     }
 
     const modal = new ModalBuilder()

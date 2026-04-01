@@ -10,7 +10,7 @@ module.exports = {
     const member = await interaction.guild.members.fetch(userId).catch(() => null);
 
     if (!member) {
-      return interaction.reply({ embeds: [errorEmbed('User Not Found', 'Could not find that user in this server.')], ephemeral: true });
+      return interaction.reply({ embeds: [errorEmbed('User Not Found', 'Could not find that user in this server.')], flags: MessageFlags.Ephemeral });
     }
 
     await interaction.channel.permissionOverwrites.edit(member, {

@@ -50,7 +50,7 @@ function buildPanelComponents() {
 // Called from .panel prefix command
 async function panelCommand(message, client) {
   if (!hasStaffRole(message.member)) {
-    return message.reply({ embeds: [errorEmbed('No Permission')], ephemeral: true });
+    return message.reply({ embeds: [errorEmbed('No Permission')], flags: MessageFlags.Ephemeral });
   }
   await message.channel.send({ embeds: [buildPanelEmbed()], components: buildPanelComponents() });
   await message.delete().catch(() => {});
@@ -63,10 +63,10 @@ module.exports = {
 
   async execute(interaction) {
     if (!hasStaffRole(interaction.member)) {
-      return interaction.reply({ embeds: [errorEmbed('No Permission')], ephemeral: true });
+      return interaction.reply({ embeds: [errorEmbed('No Permission')], flags: MessageFlags.Ephemeral });
     }
     await interaction.channel.send({ embeds: [buildPanelEmbed()], components: buildPanelComponents() });
-    await interaction.reply({ content: '✅ Panel posted.', ephemeral: true });
+    await interaction.reply({ content: '✅ Panel posted.', flags: MessageFlags.Ephemeral });
   },
 
   panelCommand,

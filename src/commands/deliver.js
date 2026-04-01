@@ -10,7 +10,7 @@ module.exports = {
 
   async execute(interaction) {
     if (!hasStaffRole(interaction.member)) {
-      return interaction.reply({ embeds: [errorEmbed('No Permission')], ephemeral: true });
+      return interaction.reply({ embeds: [errorEmbed('No Permission')], flags: MessageFlags.Ephemeral });
     }
 
     const member = interaction.options.getMember('member');
@@ -35,7 +35,7 @@ module.exports = {
     await interaction.reply({
       embeds: [embed],
       components: [new ActionRowBuilder().addComponents(select)],
-      ephemeral: true,
+      flags: MessageFlags.Ephemeral,
     });
   },
 };

@@ -6,7 +6,7 @@ module.exports = {
   customId: 'remind_modal:',
 
   async execute(interaction, client) {
-    await interaction.deferReply({ ephemeral: true });
+    await interaction.deferReply({ flags: MessageFlags.Ephemeral });
 
     const [, memberId, channelId] = interaction.customId.split(':');
     const customMessage = interaction.fields.getTextInputValue('custom_message');
