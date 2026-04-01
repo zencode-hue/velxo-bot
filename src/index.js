@@ -50,7 +50,7 @@ loadDir('interactions', handler => {
   if (handler.customId && handler.execute) client.interactions.set(handler.customId, handler);
 });
 
-client.once('ready', () => {
+client.once('clientReady', () => {
   console.log(`[Velxo] Logged in as ${client.user.tag}`);
   client.user.setPresence({
     activities: [{ name: 'velxo.shop | Premium Digital Products', type: 3 }],
