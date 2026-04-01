@@ -1,6 +1,6 @@
-const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, StringSelectMenuBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
-const { VELXO_ORANGE, SHOP_ICON, SHOP_URL, BOT_FOOTER } = require(require('path').join(__dirname, require('fs').existsSync(require('path').join(__dirname,'constants.js')) ? 'constants' : '../constants'));
-const { errorEmbed, hasStaffRole } = require(require('path').join(__dirname, require('fs').existsSync(require('path').join(__dirname,'utils.js')) ? 'utils' : '../utils'));
+const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, StringSelectMenuBuilder, ButtonBuilder, ButtonStyle, MessageFlags } = require('discord.js');
+const { VELXO_ORANGE, SHOP_ICON, SHOP_URL, BOT_FOOTER } = require('../constants');
+const { errorEmbed, hasStaffRole } = require('../utils');
 
 function buildPanelEmbed() {
   return new EmbedBuilder()

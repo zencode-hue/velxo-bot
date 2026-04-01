@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, ModalBuilder, TextInputBuilder, TextInputStyle, ActionRowBuilder } = require('discord.js');
-const { errorEmbed, hasStaffRole } = require(require('path').join(__dirname, require('fs').existsSync(require('path').join(__dirname,'utils.js')) ? 'utils' : '../utils'));
+const { errorEmbed, hasStaffRole } = require('../utils');
 
 module.exports = {
   data: new SlashCommandBuilder()

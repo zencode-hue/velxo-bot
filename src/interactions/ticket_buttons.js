@@ -6,8 +6,8 @@ const {
 const {
   VELXO_ORANGE, VELXO_GREEN, VELXO_RED,
   SHOP_ICON, SHOP_URL, BOT_FOOTER,
-} = require(require('path').join(__dirname, require('fs').existsSync(require('path').join(__dirname,'constants.js')) ? 'constants' : '../constants'));
-const { errorEmbed, buildTranscript } = require(require('path').join(__dirname, require('fs').existsSync(require('path').join(__dirname,'utils.js')) ? 'utils' : '../utils'));
+} = require('../constants');
+const { errorEmbed, buildTranscript } = require('../utils');
 
 // Handles: ticket_close, ticket_claim, ticket_adduser, ticket_confirm_close, ticket_cancel_close
 module.exports = {

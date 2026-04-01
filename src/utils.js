@@ -1,4 +1,4 @@
-const { EmbedBuilder } = require('discord.js');
+const { EmbedBuilder , MessageFlags } = require('discord.js');
 const { VELXO_ORANGE, VELXO_GREEN, VELXO_RED, SHOP_ICON, BOT_FOOTER } = require('./constants');
 const fs = require('fs');
 

@@ -1,6 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder, PermissionsBitField } = require('discord.js');
-const { VELXO_ORANGE, VELXO_GREEN, VELXO_RED, SHOP_ICON, BOT_FOOTER } = require(require('path').join(__dirname, require('fs').existsSync(require('path').join(__dirname,'constants.js')) ? 'constants' : '../constants'));
-const { errorEmbed, hasStaffRole } = require(require('path').join(__dirname, require('fs').existsSync(require('path').join(__dirname,'utils.js')) ? 'utils' : '../utils'));
+const { VELXO_ORANGE, VELXO_GREEN, VELXO_RED, SHOP_ICON, BOT_FOOTER } = require('../constants');
+const { errorEmbed, hasStaffRole } = require('../utils');
 
 module.exports = {
   data: new SlashCommandBuilder()
