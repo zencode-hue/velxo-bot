@@ -5,9 +5,11 @@ module.exports = {
   VELXO_RED:         0xE74C3C,
   VELXO_GRAY:        0x2C2F33,
 
-  SHOP_URL:    'https://velxo.shop',
-  SHOP_ICON:   'https://velxo.shop/favicon.ico',
-  BOT_FOOTER:  'Velxo Shop • velxo.shop',
+  SHOP_URL:     'https://velxo.shop',
+  SHOP_DEALS:   'https://velxo.shop/deals',
+  SHOP_SUPPORT: 'https://velxo.shop/support',
+  SHOP_ICON:    'https://velxo.shop/favicon.ico',
+  BOT_FOOTER:   'Velxo Shop • velxo.shop',
 
   PRIORITY_COLORS: { low: 0x2ECC71, medium: 0xE8620A, high: 0xE74C3C },
   PRIORITY_EMOJI:  { low: '🟢',     medium: '🟠',      high: '🔴'    },

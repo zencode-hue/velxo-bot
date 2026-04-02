@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, StringSelectMenuBuilder, ButtonBuilder, ButtonStyle, MessageFlags } = require('discord.js');
-const { VELXO_ORANGE, SHOP_ICON, SHOP_URL, BOT_FOOTER } = require('../constants');
+const { VELXO_ORANGE, SHOP_ICON, SHOP_URL, SHOP_DEALS, SHOP_SUPPORT, BOT_FOOTER } = require('../constants');
 const { errorEmbed, hasStaffRole } = require('../utils');
 
 function buildPanelEmbed() {
@@ -19,7 +19,7 @@ function buildPanelEmbed() {
       { name: '⏱️  Response Time', value: '> Our team typically responds within **15–30 minutes**.', inline: false },
       {
         name: '📌  Before Opening a Ticket',
-        value: '> • Check our [FAQ at velxo.shop](https://velxo.shop)\n> • Have your Order ID ready if applicable\n> • One ticket per issue please',
+        value: '> • Check our [FAQ at velxo.shop](https://velxo.shop/support)\n> • Have your Order ID ready if applicable\n> • One ticket per issue please',
         inline: false,
       }
     )
@@ -41,7 +41,8 @@ function buildPanelComponents() {
 
   const buttons = new ActionRowBuilder().addComponents(
     new ButtonBuilder().setLabel('Velxo Shop').setURL(SHOP_URL).setStyle(ButtonStyle.Link).setEmoji('🛒'),
-    new ButtonBuilder().setLabel('Browse Deals').setURL(SHOP_URL).setStyle(ButtonStyle.Link).setEmoji('🔥')
+    new ButtonBuilder().setLabel('Browse Deals').setURL(SHOP_DEALS).setStyle(ButtonStyle.Link).setEmoji('🔥'),
+    new ButtonBuilder().setLabel('Support').setURL(SHOP_SUPPORT).setStyle(ButtonStyle.Link).setEmoji('🎫'),
   );
 
   return [new ActionRowBuilder().addComponents(select), buttons];

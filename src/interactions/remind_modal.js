@@ -1,5 +1,5 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, MessageFlags } = require('discord.js');
-const { VELXO_ORANGE, VELXO_GREEN, SHOP_ICON, SHOP_URL, BOT_FOOTER } = require('../constants');
+const { VELXO_ORANGE, VELXO_GREEN, SHOP_ICON, SHOP_URL, SHOP_DEALS, SHOP_SUPPORT, BOT_FOOTER } = require('../constants');
 const { errorEmbed } = require('../utils');
 
 module.exports = {
@@ -36,7 +36,7 @@ module.exports = {
     }
     embed.addFields({
       name: '💡  Quick Tips',
-      value: '> • Reply in your ticket channel\n> • Use the close button when resolved\n> • Visit velxo.shop for self-service',
+      value: '> • Reply in your ticket channel\n> • Use the close button when resolved\n> • Visit [velxo.shop/support](https://velxo.shop/support) for self-service',
       inline: false,
     });
 

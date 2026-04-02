@@ -1,5 +1,5 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, MessageFlags } = require('discord.js');
-const { VELXO_ORANGE, VELXO_GREEN, SHOP_ICON, SHOP_URL, BOT_FOOTER } = require('../constants');
+const { VELXO_ORANGE, VELXO_GREEN, SHOP_ICON, SHOP_URL, SHOP_DEALS, SHOP_SUPPORT, BOT_FOOTER } = require('../constants');
 
 module.exports = {
   customId: 'announce_modal:',
@@ -36,8 +36,8 @@ module.exports = {
 
     const buttons = new ActionRowBuilder().addComponents(
       new ButtonBuilder().setLabel('Shop Now').setURL(SHOP_URL).setStyle(ButtonStyle.Link).setEmoji('🛒'),
-      new ButtonBuilder().setLabel('Browse Deals').setURL(SHOP_URL).setStyle(ButtonStyle.Link).setEmoji('🔥'),
-      new ButtonBuilder().setLabel('Support').setURL(SHOP_URL).setStyle(ButtonStyle.Link).setEmoji('🎫'),
+      new ButtonBuilder().setLabel('Browse Deals').setURL(SHOP_DEALS).setStyle(ButtonStyle.Link).setEmoji('🔥'),
+      new ButtonBuilder().setLabel('Support').setURL(SHOP_SUPPORT).setStyle(ButtonStyle.Link).setEmoji('🎫'),
     );
 
     await channel.send({ content: ping ? '@everyone' : null, embeds: [embed], components: [buttons] });

@@ -4,7 +4,7 @@ const {
 } = require('discord.js');
 const {
   VELXO_ORANGE, VELXO_GREEN,
-  SHOP_ICON, SHOP_URL, BOT_FOOTER,
+  SHOP_ICON, SHOP_URL, SHOP_DEALS, SHOP_SUPPORT, BOT_FOOTER,
   PRIORITY_COLORS, PRIORITY_EMOJI, TICKET_META,
 } = require('../constants');
 const { errorEmbed, getTicketNumber, padTicket } = require('../utils');
@@ -107,7 +107,8 @@ module.exports = {
       );
       const links = new ActionRowBuilder().addComponents(
         new ButtonBuilder().setLabel('Velxo Shop').setURL(SHOP_URL).setStyle(ButtonStyle.Link).setEmoji('🛒'),
-        new ButtonBuilder().setLabel('Browse Deals').setURL(SHOP_URL).setStyle(ButtonStyle.Link).setEmoji('🔥'),
+        new ButtonBuilder().setLabel('Browse Deals').setURL(SHOP_DEALS).setStyle(ButtonStyle.Link).setEmoji('🔥'),
+        new ButtonBuilder().setLabel('Support').setURL(SHOP_SUPPORT).setStyle(ButtonStyle.Link).setEmoji('🎫'),
       );
 
       const mention = staffRole ? `${user} ${staffRole}` : `${user}`;

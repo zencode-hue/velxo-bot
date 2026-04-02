@@ -1,5 +1,5 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, MessageFlags } = require('discord.js');
-const { VELXO_ORANGE, VELXO_GREEN, SHOP_ICON, SHOP_URL, BOT_FOOTER } = require('../constants');
+const { VELXO_ORANGE, VELXO_GREEN, SHOP_ICON, SHOP_URL, SHOP_DEALS, SHOP_SUPPORT, BOT_FOOTER } = require('../constants');
 
 module.exports = {
   customId: 'market_modal',
@@ -44,7 +44,7 @@ module.exports = {
 
     const view = new ActionRowBuilder().addComponents(
       new ButtonBuilder().setLabel('Shop Now').setURL(dealLink).setStyle(ButtonStyle.Link).setEmoji('🛒'),
-      new ButtonBuilder().setLabel('Browse Deals').setURL(SHOP_URL).setStyle(ButtonStyle.Link).setEmoji('🔥'),
+      new ButtonBuilder().setLabel('Browse Deals').setURL(SHOP_DEALS).setStyle(ButtonStyle.Link).setEmoji('🔥'),
     );
 
     let i = 0;
