@@ -1,7 +1,7 @@
 const {
   EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle,
   ModalBuilder, TextInputBuilder, TextInputStyle,
-  AttachmentBuilder,
+  AttachmentBuilder, MessageFlags,
 } = require('discord.js');
 const {
   VELXO_ORANGE, VELXO_GREEN, VELXO_RED,

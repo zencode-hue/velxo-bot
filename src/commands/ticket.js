@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder, PermissionsBitField } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder, PermissionsBitField, MessageFlags } = require('discord.js');
 const { VELXO_ORANGE, VELXO_GREEN, VELXO_RED, SHOP_ICON, BOT_FOOTER } = require('../constants');
 const { errorEmbed, hasStaffRole } = require('../utils');
 
